@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500&family=Source+Sans+Pro:ital,wght@0,400;1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Raleway', sans-serif;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior:smooth;
+    scroll-padding-top: 9px;
+}
+::-webkit-scrollbar{
+    width:8px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #ccc;
+}
+body{
+    background-color: #111;
+}
+section{
+    margin-top: 50px;
+}
+
+header{
+    background-color: #222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 5%;
+}
+a{
+   text-decoration: 0;
+}
+header .logo a{
+    font-size: 25px;
+    color: #29d9d5;
+}
+header .logo a span{
+    color: #fff;
+}
+header i{
+    font-size: 15px;
+    color: #fff;
+    font-style: oblique;
+}
+/* menu css*/
+.menu{
+    display: flex;
+    align-items: center;
+}
+.menu li{
+    margin: 0 15px;
+    list-style-type: none;
+    font-weight: 700;
+}
+.menu li a{
+    color: #fff;
+    font-size: 15px;
+}
+.menu li:hover{
+    box-shadow: 0 0 10px #29d9d5;
+    color:#29d9d5;
+    }
+    
+.reservation{
+    color: #29d9d5;
+    font-size: 14px;
+    border: 2px solid #29d9d5;
+    padding: 5px 20px;
+    transition: 0.5s;
+    font-weight: bolder;
+}
+.reservation:hover{
+    background-color: #29d9d5;
+    color: #fff;
+
+}
+/* home Accueil css*/
+#home{
+  background:linear-gradient(rgba(0,0,0,0.1),#333),url(" ../images/paris1.jpg");  
+  background-position: center;
+  background-size: cover;
+  height: calc(100vh );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+#home h2{
+    font-size: 45px;
+    margin-bottom: 10px;
+    -webkit-text-stroke: #fff 0.02px;
+    color: transparent;
+    text-transform:lowercase;
+}
+#home h4{
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+#home p{
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+.home-btn{
+    margin-bottom: 20px;
+}
+.mtz{
+    background-color: #222;
+    padding: 20px;
+    width: 70%;
+    position: absolute;
+    bottom: -50px;
+}
+.mtz form{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+.mtz form div, .mtz form input[type="submit"]{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.mtz form label{
+ color: #999;
+ font-size: 15px;
+ margin-bottom: 10px;
+}
+.mtz form input{
+padding: 5px 20px;
+background-color: transparent;
+border: 1px solid #29d9d5;
+outline: 0;
+width: 100%;
+font-size: 13px;
+color: #fff;
+}
+.mtz form div, .mtz form input[type="submit"]{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #29d9d5;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.mtz form input[type="submit"]:hover{
+    box-shadow: 0 0 10px #29d9d5;
+}
+/* A propos css*/
+#a-propos{
+    margin-bottom: 50px;
+    margin: 100px;
+    padding: 0 10%;
+    width: 100%;
+}
+#a-propos .gauche{
+    margin-left: -20px;
+}
+.title{
+    text-transform: capitalize;
+    margin: 70px 0;
+    font-weight: bold;
+    color: #29d9d5;
+    position: relative;
+    margin-left: 15px;
+    font-size: 18px;
+    margin-left: -80px;
+}
+.title::after{
+    position: absolute;
+    left: -15px;
+    content: "";
+    height: 100%;
+    background-color: #fff;
+    width: 5px;
+}
+.img-zo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.img-zo .gauche{
+    position: relative;
+    margin-left: 10px;
+    height: 250px;
+    width: 40%;
+}
+.img-zo .gauche video{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-shadow: 0 0 10px #29d9d5;
+    margin-left: -70px;
+    margin-top: 5px;
+}
+
+.img-zo .gauche::after{
+    position: absolute;
+    bottom: -10px;
+    right: 77px;
+    content: "";
+    height: 100%;
+    background-color: #29d9d5;
+    width: 100%;
+    z-index: -1;
+}
+.img-zo .droite{
+    width: 57%;
+
+}
+.img-zo .droite h3{
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.img-zo .droite p{
+    color: #fff;
+    font-size: 20px;
+    font-family:serif;
+    margin-bottom: 36px;
+}
+.img-zo .droite a{
+    border: 1px solid #29d9d5;
+    color: #29d9d5;
+    font-size: 14px;
+    padding: 8px 25px;
+    font-weight: bold;
+}
+/* destinations populaires css*/
+#destination{
+    padding: 0 10%;
+    margin-bottom: 50px;
+}
+#destination .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+#destination h1{
+    margin-left: 12px;
+}
+#destination .content .box{
+    overflow: hidden;
+    position: relative;
+    height: 250px;
+    transition: 0.5s;
+}
+#destination .content .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#destination .dct{
+    color: #fff;
+    font-size: 19px;
+    font-family:serif;
+    margin-top: -5%;
+}
+#destination  .content{
+    margin-top: 1%;
+}
+.box .pays {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #fff;
+    text-align: center;
+    align-items: center;
+    transform: translatex(100%);
+    transition: 0.5s;
+}
+.box .pays h4{
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 60px;
+}
+.box .pays p{
+    padding: 2px;
+    font-size: 14px;
+    
+}
+.box .pays p:nth-child(3){ 
+    margin-bottom:25px;
+}
+.box .pays a{
+padding: 10px 60px;
+border: 2px solid #29d9d5;
+color: #29d9d5;
+font-weight: bold;
+}
+.box:hover{
+    box-shadow: 0 0 10px #29d9d5;
+}
+.box:hover .pays{
+    transform: translateX(0);
+}
+.pays{
+    width: 100%;
+    height: 100%;
+}
+.zo{
+    margin-top: 20px;
+}
+
+/* contact css */
+#contact{
+    padding: 0 10%;
+    margin-bottom: 50px;
+    height: 90vh;
+}
+#contact h1{
+    margin-left: 10px;
+}
+#contact form{
+    background-color: #fff;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+#contact label{
+    margin-left: -2%;
+}
+.mino{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mino .gauche , .mino .droite{
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+#contact form label{
+    font-size: 14px;
+    padding: 10px;
+    font-weight: 600;
+}
+#contact form input{
+    padding: 8px;
+    outline: 0;
+    border: 1px solid #999;
+}
+textarea{
+    height: 150px;
+    resize: none;
+    outline: 0;
+    width: 100%;
+    padding: 10px;
+}
+#contact form input:focus , textarea:focus{
+    border: 1px solid #29d9d5;
+}
+iframe{
+    height: 150px;
+    width: 100%;
+}
+#contact button{
+    width: fit-content;
+    padding: 8px 40px;
+    background-color: #111;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#contact button:hover{
+    letter-spacing: 1px;
+}
+footer{
+    width: 100%;
+    background-color: #222;
+    padding: 10px 0;
+    font-size: 14px;
+    text-align: center;
+    height: 300px;
+}
+footer p{
+    color: #fff;
+}
+footer .lp{
+    margin-top: 17%;
+}
+footer p span{
+    color: #29d9d5;
+}
+footer a{
+    color: #fff;
+}
+footer .omzo{
+ margin-top: -18%;  
+ margin-left: -68%; 
+}
+footer #mtz{
+    font-size: 25px;
+    margin-top: -1.5%;
+}
+footer #mtz i{
+    font-size: 15px;
+    margin-top: 2.5%;
+}
+footer .zizou{
+    margin-left: -70%;
+    margin-top: 1%;
+}
+footer .copyright{
+   margin-left:-61.5% ;
+   margin-top: 1%;
+}
+footer .milk{
+    margin-top: -1%;  
+    margin-left: 53%;
+}
+hr{
+    width: 75%;
+    margin-left:10%;
+    align-content: center; 
+    margin-top:-2.8%;
+} 
+footer .miya{
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-top: 2%;
+}
+footer .vl1{
+margin-top: -7.5%;
+margin-left: -35%;
+font-size: 15px;
+}
+footer .vl2{
+    margin-top: -12%;
+    margin-left:6%;
+    font-size: 15px;
+}
+footer .vl3{
+    margin-top: -14.5%;
+    margin-left: 50%;
+    font-size: 15px;
+}
+footer .leny{
+    margin-top:3%;
+}
+.fa-twitter {
+    color: #fff;
+    background-color:  #2ea3f2;
+    font-size: 20px;
+    margin: 5px;
+    margin-top: 1%;
+}
+.fa-linkedin{
+    color:#fff;
+    background-color: #337ab7;
+    font-size: 20px;
+    margin: 5px;
+    margin-top: 1%;
+}
+.fa-facebook{
+    color:#fff;
+    background-color:#337ab7;
+    font-size: 20px;
+    margin: 5px;
+    margin-top: 1%;
+}
+.fa-instagram{
+    color:#fff;
+    background-color: rgb(221, 40, 40);
+    font-size: 20px;
+    margin: 5px;
+    margin-top: 1%;
+}
+/* Responsive */
+
+    header.menu{
+        display: none;
+    }
+    .reservation{
+        display: none;
+    }
+/* Home responsive */
+#home h2{
+    font-size: 25px;
+    -webkit-text-stroke: 0;
+    color: #fff;
+}
+#home h4{
+font-size: 28px;
+}
+#home p{
+text-align: center;
+font-size: 15px;
+}
+
+#home .mtz{
+    width: 100%;
+    height: 200px;
+}
+#home .mtz form{
+    flex-wrap: wrap;
+}
+#home .mtz form div{
+    margin-top: 10px;
+    flex-direction: column;
+    width: 47%;
+}
+.home-btn{
+    display: block;
+
+}
+#home .mtz form input[type="submit"]{
+width: 47%;
+}
+/* Responsive A propos */
+.img-zo{
+    flex-direction: column;
+    width: 100%;
+}
+.img-zo .gauche , .img-zo .droite{
+    width:100%; 
+}
+.img-zo .gauche video{
+    width: 100%;
+}
+.img-zo .gauche::after{
+    background-color: transparent;
+}
+.img-zo .gauche{
+    margin-bottom: 25px;
+}
+/* Responsive menu */
+.responsive-menu{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+.responsive-menu::after{
+    position: absolute;
+    content: "";
+    height: 3px;
+    background-color: #29d9d5;
+    width: 28px;
+    box-shadow: 0 10px 0 #29d9d5;
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
+.responsive-menu::before{
+    position: absolute;
+    content: "";
+    height: 3px;
+    background-color: #29d9d5;
+    width: 28px;
+    transform: translateY(10px);
+    transition: 0.5s;
+}
+.responsive-menu .active::after{
+    transform: rotate(45deg);
+}
+.responsive-menu .active::before{
+    transform: rotate(-45deg);
+}
+
+
+
+/* html2: suite.html */
+#lire{
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+#lire p{
+    margin-top: 10%;
+    width: 80%;
+    height: 70%;
+    font-size: 20px;
+}
+.suite{
+    background:linear-gradient(rgba(0,0,0,0.1),#333),url(" ../images/paris1.jpg");  
+    background-position: center;
+    background-size: cover;
+    height: calc(100vh );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+
