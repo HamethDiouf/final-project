@@ -10,7 +10,7 @@ html{
     font-size: 62.5%;
     scroll-behavior:smooth;
     scroll-padding-top: 9px;
-}
+} 
 ::-webkit-scrollbar{
     width:8px;
 }
@@ -18,7 +18,7 @@ html{
     background-color: #ccc;
 }
 body{
-    background-color: #111;
+    background-color: #ffff;
 }
 section{
     margin-top: 50px;
@@ -35,7 +35,7 @@ header{
     align-items: center;
     justify-content: space-between;
     height: 50px;
-    padding: 0 5%;
+    padding: 3.5rem;
 }
 a{
    text-decoration: 0;
@@ -70,9 +70,9 @@ ul.menu li:hover{
     /* color:#2ea3f2; */
     text-decoration: underline #2ea3f2 2px;
     }
-    .menu li a:hover{
-        /* color:#2ea3f2; */
-    }
+    /* .menu li a:hover{
+        color:#2ea3f2;
+    } */
     .navbar li a:hover{
         color:#2ea3f2;
         text-decoration:0;
@@ -81,21 +81,31 @@ ul.menu li:hover{
         /* color: #2ea3f2; */
         text-decoration: underline #2ea3f2 2px;
     }
-.reservation{
-    color: #2ea3f2;
-    font-size: 14px;
-    border: 2px solid #2ea3f2;
+ 
+    header .reservation, #home .reservation{
+    font-size: 16px;
+    border: 1px solid #2ea3f2;
     padding: 5px 20px;
     transition: 0.5s;
     font-weight: bolder;
+    padding: 1rem 2rem;
+    background-color: #3d96d0;
 }
-.reservation:hover{
-    background-color: #2ea3f2;
+header .reservation {
+    transform: translateX(24rem);
     color: #fff;
+}
+#home .reservation {
+    margin-top: 10rem;
+    color: #333;
+}
+header .reservation:hover, #home .reservation:hover{
+    background-color: #2ea3f2;
+    color: #222;
 }
 /* home Accueil css*/
 #home{
-  background:linear-gradient(rgba(0,0,0,0.1),#333),url(" ../images/paris1.jpg");  
+  background:linear-gradient(rgba(0,0,0,0.1),#333),url("../images/v4.jpg ");  
   background-position: center;
   background-size: cover;
   height: calc(100vh );
@@ -105,22 +115,18 @@ ul.menu li:hover{
   flex-direction: column;
   position: relative;
 }
-#home h2{
-    font-size: 45px;
-    margin-bottom: 10px;
-    -webkit-text-stroke: #fff 0.02px;
-    color: transparent;
-    text-transform:lowercase;
-}
+
 #home h4{
-    font-size: 50px;
+    font-size: 4rem;
     color: #fff;
     margin-bottom: 10px;
     text-transform: capitalize;
 }
 #home p{
+    font-size: 18px;
     color: #fff;
     margin-bottom: 10px;
+    margin-top: 1rem;
 }
 .home-btn{
     margin-bottom: 20px;
@@ -156,14 +162,21 @@ outline: 0;
 width: 100%;
 font-size: 13px;
 color: #fff;
+border-radius: 5px;
+padding: 1rem;
 }
 .mtz form div, .mtz form input[type="submit"]{
     display: flex;
     align-items: center;
     text-transform: uppercase;
-    color: #2ea3f2;
     cursor: pointer;
     transition: 0.5s;
+    /* background-color: #2ea3f2; */
+}
+.mtz form input[type="submit"] {
+    background-color: #2ea3f2;
+    color: #fff;
+    font-weight: 600;
 }
 .mtz form input[type="submit"]:hover{
     box-shadow: 0 0 10px #2ea3f2;
@@ -193,7 +206,7 @@ color: #fff;
     left: -15px;
     content: "";
     height: 100%;
-    background-color: #fff;
+    background-color: #555;
     width: 5px;
 }
 .img-zo{
@@ -206,15 +219,18 @@ color: #fff;
     position: relative;
     margin-left: 10px;
     height: 250px;
-    width: 40%;
+    width: 50%;
 }
 .img-zo .gauche video{
     width: 100%;
     height: 100%;
     position: relative;
-    box-shadow: 0 0 10px #2ea3f2;
     margin-left: -70px;
     margin-top: 5px;
+}
+video{
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(0,0,0, .7);
 }
 .img-zo .gauche::after{
     position: absolute;
@@ -222,31 +238,29 @@ color: #fff;
     right: 77px;
     content: "";
     height: 100%;
-    background-color: #2ea3f2;
     width: 100%;
-    z-index: -1;
 }
 .img-zo .droite{
-    width: 57%;
+    width: 80%;
 }
 .img-zo .droite h3{
-    color: #fff;
-    font-size: 20px;
+    color: #333;
+    font-size: 18px;
     margin-bottom: 20px;
 }
 .img-zo .droite p{
-    color: #fff;
-    font-size: 18px;
-    font-family:serif;
-    margin-bottom: 36px;
-    font-style: italic;
+    color: #333;
+    font-size: 16px;
+    font-family: cursive;
+    margin-bottom: 4rem;
+    /* font-style: italic; */
 }
 .reservation{
     border-radius: 5px;
 }
 .img-zo .droite a{
-    border: 1px solid #2ea3f2;
-    color: #2ea3f2;
+    border: 1px solid #333;
+    color: #333;
     font-size: 14px;
     padding: 8px 25px;
     font-weight: bold;
@@ -254,7 +268,8 @@ color: #fff;
 }
 .droite a:hover{
     background-color: #2ea3f2;
-    color: #fff;
+    color: #222;
+    border: none;
 }
 /* destinations populaires css*/
 #destination{
@@ -522,14 +537,21 @@ footer .leny{
     width: 30px;
 }
 /* Responsive */
-
-    header.menu{
+@media(max-width: 950px){
+    header{
+        padding: 0 10px;
+    }
+    header .menu{
         display: none;
     }
     .reservation{
         display: none;
     }
-/* Home responsive */
+}
+
+
+    /* responsive  */
+    @media(max-width: 780px){
 #home h2{
     font-size: 25px;
     -webkit-text-stroke: 0;
@@ -562,6 +584,15 @@ font-size: 20px;
 #home .mtz form input[type="submit"]{
 width: 47%;
 }
+}
+
+@media(max-width:500px) { 
+    header .menu{
+        display: none;
+    }
+    .reservation{
+        display: none;
+    }
 /* Responsive A propos */
 .img-zo{
     flex-direction: column;
@@ -630,6 +661,7 @@ header .menu.responsive li {
     width: 100px;
     padding-left: 20px;
 }
+}
 @keyframes animate-menu{
     0%{
         transform: translateY(0);
@@ -658,7 +690,7 @@ header .menu.responsive li {
 h1.reserve{
     color: #fff;
     font-size: 30px;
-    margin-top: 10%;-
+    margin-top: 10%;
 }
 .navbar .logo{
     font-size: 25px;
@@ -720,7 +752,7 @@ margin-top: 0.5%;
         margin-bottom: 10px;
        }
        #formulaire form input[type="submit"]:hover{
-        box-shadow: 0 0 10px #2ea3f2;
+        box-shadow: 0 0 5px #2ea3f2;
     }
     #formulaire form input[value="rechercher"]{
         font-size: 25px;
@@ -1011,18 +1043,7 @@ margin-top: 0.5%;
         margin-left: 9px;
     }
 
-    #home:hover{
-        background:linear-gradient(rgba(0,0,0,0.1),#333),url(" ../images/air.jpg");  
-        background-position: center;
-        background-size: cover;
-        height: calc(100vh );
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: relative;
-      }
-  
+   
     
 
 

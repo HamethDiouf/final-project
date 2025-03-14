@@ -10,7 +10,7 @@ document.getElementById('voir').addEventListener("submit", function(e) {
     var erreur;
     var pays = document.getElementById('pays');
     var ville = document.getElementById('ville');
-    var région = document.getElementById('région');
+    var région = document.getElementById('région'); 
 
     if(!pays.value) {
         erreur = "Veuillez renseigner un pays";
